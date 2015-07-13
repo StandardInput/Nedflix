@@ -1,2 +1,2 @@
 # Nedflix
-Een gratis netflix alternatief voor Nederlandse programma's
+Nedflix is een makkelijke manier om Nederlandse tv-programma's terug te kijken
