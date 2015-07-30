@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html>
+
   <head>
+
+  	<meta charset="utf-8">
+
     <title>Nedflix</title>
+
     <link rel="stylesheet" href="css/material.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/material.min.js"></script>
-    <script type="text/javascript">
-    var ipc = require('ipc');
-    ipc.on('getRTLEpisodes', function(message) {
-      console.log(message);  // Prints "whoooooooh!"
-    });
-    alert('hall');
-    </script>
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
+
   <body>
     <!-- Simple header with scrollable tabs. -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header">
-        <div class="nedflix-layout-header mdl-layout__header-row">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+
+      <header class="mdl-layout__header mdl-color--green-600">
+        <div class="nedflix-layout-header mdl-layout__header-row mdl-layout__header--scroll">
           <!-- Title -->
           <span class="mdl-layout-title">Nedflix</span>
         </div>
+
         <!-- Tabs -->
-        <div class="nedflix-layout-header mdl-layout__tab-bar">
+        <div class="nedflix-layout-header mdl-layout__tab-bar mdl-color--green-700">
           <a href="#live" class="mdl-layout__tab is-active">LIVE</a>
           <a href="#npo" class="mdl-layout__tab">NPO</a>
           <a href="#rtl-xl" class="mdl-layout__tab">RTL XL</a>
@@ -34,48 +35,55 @@
           <a href="#foxsports" class="mdl-layout__tab">Foxsports</a>
         </div>
       </header>
+
       <main class="mdl-layout__content">
+
         <section class="mdl-layout__tab-panel is-active" id="live">
-          <div class="page-content">
-              lol
-          </div>
+          <div class="page-content"></div>
         </section>
+
         <section class="mdl-layout__tab-panel" id="npo">
-          <div class="page-content">
-              
-          </div>
+          <div class="page-content"></div>
         </section>
+
         <section class="mdl-layout__tab-panel" id="rtl-xl">
-          <div class="page-content">
-              
-          </div>
+          <div class="page-content"></div>
         </section>
+
         <section class="mdl-layout__tab-panel" id="sbs">
-          <div class="page-content">
-              
-          </div>
+          <div class="page-content"></div>
         </section>
+
         <section class="mdl-layout__tab-panel" id="mtv">
-          <div class="page-content">
-              
-          </div>
+          <div class="page-content"></div>
         </section>
+
         <section class="mdl-layout__tab-panel" id="sport-1">
-          <div class="page-content">
-              
-          </div>
+          <div class="page-content"></div>
         </section>
+
         <section class="mdl-layout__tab-panel" id="vtm">
-          <div class="page-content">
-              
-          </div>
+          <div class="page-content"></div>
         </section>
+
         <section class="mdl-layout__tab-panel" id="foxsports">
-          <div class="page-content">
-              
-          </div>
+          <div class="page-content"></div>
         </section>
+
       </main>
+
     </div>
+
+    <script src="js/material.min.js"></script>
+    <script type="text/javascript">
+
+    	var ipc = require('ipc');
+   		ipc.on('getRTLEpisodes', function(message) {
+     		console.log(message);  // Prints "whoooooooh!"
+    	});
+
+    </script>
+
   </body>
+
 </html>
