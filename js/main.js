@@ -1,11 +1,9 @@
 var app = require('app');  // Module to control application life.
 var nfApi = require('nedflix-api');
 var BrowserWindow = require('browser-window');  // Module to create native browser window.
+var ipc = require('ipc');
 
 var mainWindow = null;
-
-console.log(nfApi.getRTL());
-
 
 app.on('window-all-closed', function() {
   // On OS X it is common for applications and their menu bar
@@ -26,7 +24,12 @@ app.on('ready', function() {
 
   // Open the devtools.
   mainWindow.openDevTools();
-
+  mainWindow.webContents.on('did-finish-load', function() {
+    // console.log(nfApi.getRTL("az"));
+    nfApi.getRTLEpisodes('277291', function(data) {
+      mainWindow.webContents.send('getRTLEpisodes', data);
+    });
+  });
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {
     mainWindow = null;
