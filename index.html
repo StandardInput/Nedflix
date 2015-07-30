@@ -2,10 +2,51 @@
 <html>
   <head>
     <title>Nedflix</title>
+    <link rel="stylesheet" href="css/material.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using io.js <script>document.write(process.version)</script>
-    and Electron <script>document.write(process.versions['electron'])</script>.
+    <!-- Simple header with scrollable tabs. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="layout-header mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="header-text mdl-layout-title">Nedflix</span>
+        </div>
+        <!-- Tabs -->
+        <div class="layout-header mdl-layout__tab-bar">
+          <a href="#npo" class="mdl-layout__tab is-active">LIVE</a>
+          <a href="#npo" class="mdl-layout__tab">NPO</a>
+          <a href="#rtl-xl" class="mdl-layout__tab">RTL XL</a>
+          <a href="#scroll-tab-3" class="mdl-layout__tab">SBS</a>
+          <a href="#scroll-tab-4" class="mdl-layout__tab">MTV</a>
+          <a href="#scroll-tab-5" class="mdl-layout__tab">Sport 1</a>
+          <a href="#scroll-tab-6" class="mdl-layout__tab">VTM</a>
+          <a href="#scroll-tab-6" class="mdl-layout__tab">Foxsports</a>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+          <div class="page-content"><!-- Your content goes here --></div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+          <div class="page-content"><!-- Your content goes here --></div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+          <div class="page-content"><!-- Your content goes here --></div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-4">
+          <div class="page-content"><!-- Your content goes here --></div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-5">
+          <div class="page-content"><!-- Your content goes here --></div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-6">
+          <div class="page-content"><!-- Your content goes here --></div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
