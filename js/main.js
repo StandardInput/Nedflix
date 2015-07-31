@@ -27,13 +27,13 @@ app.on('ready', function() {
   mainWindow.loadUrl('file://' + __dirname + '/../index.html');
 
   // Open the devtools.
-  /*mainWindow.openDevTools();
+  mainWindow.openDevTools();
   mainWindow.webContents.on('did-finish-load', function() {
     // console.log(nfApi.getRTL("az"));
     nfApi.getRTLEpisodes('277291', function(data) {
       mainWindow.webContents.send('getRTLEpisodes', data);
     });
-  });*/
+  });
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {
     mainWindow = null;

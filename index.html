@@ -11,6 +11,15 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script type="text/javascript">
+
+        var ipc = require('ipc');
+        ipc.on('getRTLEpisodes', function(message) {
+             console.log(message);  // Prints "whoooooooh!"
+        });
+        console.log('hallo');
+    </script>
+
   </head>
 
   <body>
@@ -116,15 +125,6 @@
     </div>
 
     <script src="js/material.min.js"></script>
-    <script type="text/javascript">
-
-    	var ipc = require('ipc');
-   		ipc.on('getRTLEpisodes', function(message) {
-     		console.log(message);  // Prints "whoooooooh!"
-    	});
-
-    </script>
-
   </body>
 
 </html>
