@@ -1,6 +1,6 @@
 {
   "dependencies" : {
-    "nedflix-api" : "1.0.1"
+    "nedflix-api" : "1.0.2"
   },
   "name"    : "Nedflix-app",
   "version" : "0.0.1",
