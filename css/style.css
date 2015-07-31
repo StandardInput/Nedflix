@@ -12,3 +12,25 @@
 	.nedflix__program-button:hover {
 		background-color: #e0e0e0;
 	}
+
+.nedflix__program-card {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 24px;
+	max-width: 100%;
+}
+
+.nedflix__program-card__title {
+	height: 148px;
+	background-size: 100% auto;
+}
+
+.nedflix__program-card__title-text {
+	font-size: 1.3rem;
+	padding: 5px;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+#tegenlicht {
+	background: url('http://www.vpro.nl/mediaObject/vpronl/programmas/tegenlicht/logo-tegenlicht/original/logo-tegenlicht.png');
+}
