@@ -13,6 +13,8 @@
 		background-color: #e0e0e0;
 	}
 
+
+
 .nedflix__program-card {
 	margin-left: auto;
 	margin-right: auto;
@@ -22,7 +24,8 @@
 
 .nedflix__program-card__title {
 	height: 148px;
-	background-size: 100% auto;
+	/*background-position: center;
+	background-size: cover;*/
 }
 
 .nedflix__program-card__title-text {
@@ -32,5 +35,5 @@
 }
 
 #tegenlicht {
-	background: url('http://www.vpro.nl/mediaObject/vpronl/programmas/tegenlicht/logo-tegenlicht/original/logo-tegenlicht.png');
+	background: url("http://www.vpro.nl/mediaObject/vpronl/programmas/tegenlicht/logo-tegenlicht/original/logo-tegenlicht.png") center / cover;
 }
