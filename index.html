@@ -21,7 +21,7 @@
 
           $.each(rtlJson, function(i, val) {
             item = '<div class="nedflix__program-card mdl-card mdl-shadow--4dp">' +
-              '<div style="background: url('+ rtlJson[i].proglogo +');" class="nedflix__program-card__title mdl-card__title mdl-color--grey-200">' +
+              '<div style="background: url('+ rtlJson[i].proglogo +') center / cover;" class="nedflix__program-card__title mdl-card__title mdl-color--grey-200">' +
                 '<span class="nedflix__program-card__title-text mdl-card__title-text mdl-color-text--white">' + rtlJson[i].name + '</span>' +
               '</div>' +
               '<div class="mdl-card__supporting-text">' + rtlJson[i].description + '</div>' +
