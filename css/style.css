@@ -14,8 +14,10 @@
 	}
 
 .nedflix__program-card {
-	margin-left: auto;
+	/*margin-left: auto;
 	margin-right: auto;
+	display: inline-block;*/
+	margin: 5px;
 	margin-bottom: 24px;
 	max-width: 100%;
 }
