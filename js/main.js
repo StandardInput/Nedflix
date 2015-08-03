@@ -9,9 +9,6 @@ var mainWindow = null;
  //   console.log(data);
  // });
 
- // nfApi.getRTL('az', function(data) {
- //   console.log(data);
- // });
 
 
 app.on('window-all-closed', function() {
@@ -38,7 +35,15 @@ app.on('ready', function() {
     nfApi.getRTL('az', function(data) {
       mainWindow.webContents.send('getRTL', data);
     });
+    
+    nfApi.getNPO(function(data) {
+      mainWindow.webContents.send('getNPO', data);
+    });
+
+
   });
+
+
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {
     mainWindow = null;

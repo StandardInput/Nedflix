@@ -32,8 +32,24 @@
             $('#rtl-xl .page-content').append(item);          
           });
         });
+        
+        ipc.on('getNPO', function(data) {
+          npoJson = JSON.parse(data);
+          $('#npo .page-content').html();
 
-        console.log('hallo');
+          $.each(npoJson, function(i, val) {
+            item = '<div class="nedflix__program-card mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--4dp">' +
+              '<div style="background: url('+ npoJson[i].poster +') center / cover;" class="nedflix__program-card__title mdl-card__title mdl-color--grey-200">' +
+                '<span class="nedflix__program-card__title-text mdl-card__title-text mdl-color-text--white">' + npoJson[i].name + '</span>' +
+              '</div>' +
+              '<div class="mdl-card__supporting-text">' + npoJson[i].description + '</div>' +
+              '<div class="mdl-card__actions mdl-card--border">' +
+                '<a class="mdl-button mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple">Afleveringen<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>' +
+              '</div>' +
+            '</div>';
+            $('#npo .page-content').append(item);          
+          });
+        });
     </script>
 
   </head>
@@ -110,7 +126,7 @@
 
         <section class="mdl-layout__tab-panel" id="npo">
           <div class="page-content mdl-grid">
-            
+   <!--          
             <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--2dp">
               <div class="mdl-card__title mdl-color--red mdl-color-text--white">
                 <h4 class="mdl-card__title-text">NPO 1</h4>
@@ -152,7 +168,7 @@
                 <h4 class="mdl-card__title-text">NPO 3</h4>
               </div>
             </div>
-
+ -->
           </div>
         </section>
 
