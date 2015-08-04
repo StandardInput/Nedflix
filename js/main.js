@@ -25,6 +25,10 @@ app.on('ready', function() {
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 1366, height: 768});
 
+  // Optimizes screen real estate and simplifies ui
+  mainWindow.setAutoHideMenuBar(true);
+  mainWindow.setMenuBarVisibility(false);
+
   // and load the index.html of the app.
   mainWindow.loadUrl('file://' + __dirname + '/../index.html');
 
