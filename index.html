@@ -60,6 +60,19 @@
         <div class="mdl-layout__header-row">
           <!-- Title -->
           <span class="mdl-layout-title">Nedflix</span>
+
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+
+          <!-- Global menu -->
+          <button id="nedflix__menu-button" class="mdl-button mdl-js-button mdl-button--icon">
+            <i class="material-icons mdl-color-text--white">more_vert</i>
+          </button>
+
+          <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu" for="nedflix__menu-button">
+            <li class="mdl-menu__item">Settings</li>
+            <li class="mdl-menu__item">About</li>
+          </ul>
         </div>
 
         <!-- Tabs -->
