@@ -35,6 +35,10 @@ app.on('ready', function() {
     nfApi.getRTL('az', function(data) {
       mainWindow.webContents.send('getRTL', data);
     });
+
+    nfApi.getMTV(function(data) {
+      mainWindow.webContents.send('getMTV', data);
+    });
     
     nfApi.getNPO(function(data) {
       mainWindow.webContents.send('getNPO', data);
