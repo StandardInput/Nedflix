@@ -36,6 +36,10 @@ app.on('ready', function() {
   mainWindow.openDevTools();
   mainWindow.webContents.on('did-finish-load', function() {
     // Improve this by letting js doing the call to the backend
+    nfApi.getNPO(function(data) {
+      mainWindow.webContents.send('getNPO', data);
+    });
+
     nfApi.getRTL('az', function(data) {
       mainWindow.webContents.send('getRTL', data);
     });
@@ -44,12 +48,8 @@ app.on('ready', function() {
       mainWindow.webContents.send('getMTV', data);
     });
     
-    nfApi.getNPO(function(data) {
-      mainWindow.webContents.send('getNPO', data);
-    });
-
-    nfApi.getMTV(function(data) {
-      mainWindow.webContents.send('getMTV', data);
+    nfApi.getVTM(function(data) {
+      mainWindow.webContents.send('getVTM', data);
     });
 
   });
