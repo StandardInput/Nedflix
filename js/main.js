@@ -44,6 +44,9 @@ app.on('ready', function() {
       mainWindow.webContents.send('getNPO', data);
     });
 
+    nfApi.getMTV(function(data) {
+      mainWindow.webContents.send('getMTV', data);
+    });
 
   });
 

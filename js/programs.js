@@ -34,3 +34,20 @@ ipc.on('getNPO', function(data) {
     $('#npo .page-content').append(item);          
   });
 });
+
+ipc.on('getMTV', function(data) {
+  mtvJson = JSON.parse(data);
+  $('#mtv .page-content').html();
+
+  $.each(mtvJson, function(i, val) {
+    item = '<div class="nedflix__program-card mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--4dp">' +
+           '<div style="background: url('+ mtvJson[i].poster +') center / cover;" class="nedflix__program-card__title mdl-card__title mdl-color--grey-200">' +
+           '<span class="nedflix__program-card__title-text mdl-card__title-text mdl-color-text--white">' + mtvJson[i].name + '</span>' +
+           '</div>' +
+           '<div class="mdl-card__actions">' +
+           '<a class="mdl-button mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple">Afleveringen<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>' +
+           '</div>' +
+           '</div>';
+    $('#mtv .page-content').append(item);          
+  });
+});
