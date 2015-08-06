@@ -35,7 +35,7 @@ app.on('ready', function() {
   // Open the devtools.
   mainWindow.openDevTools();
   mainWindow.webContents.on('did-finish-load', function() {
-    // console.log(nfApi.getRTL("az"));
+    // Improve this by letting js doing the call to the backend
     nfApi.getRTL('az', function(data) {
       mainWindow.webContents.send('getRTL', data);
     });
